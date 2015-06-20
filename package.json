@@ -1,0 +1,10 @@
+{
+	"name": "akshay-portfolio",
+	"description": "Akshay Anand's portfolio app",
+	"devDependencies": {
+		"gulp": "^3.9.0",
+		"node-bourbon": "^4.2.3",
+		"gulp-sass": "^2.0.1",
+		"gulp-layout": "^0.0.3"
+	}
+}
