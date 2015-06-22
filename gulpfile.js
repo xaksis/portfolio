@@ -51,13 +51,40 @@ gulp.task('markup:base', function(){
 		.pipe(gulp.dest(paths.target.base));
 });
 
-gulp.task('markup:blog', function(){
+gulp.task('blog:json', function(){
+  return gulp.src([paths.src.base+paths.src.blog])
+  .pipe(plugins.frontMatter({property: 'meta'}))
+  .pipe(plugins.data(function(file){
+    file.meta.path = file.path
+  }))
+  .pipe(plugins.pluck('meta', 'blogs.json'))
+  .pipe(plugins.data(function(file){
+    file.contents = new Buffer(JSON.stringify(file.meta))
+  }))
+  .pipe(gulp.dest(paths.target.base+paths.target.blog));
+});
+
+gulp.task('projects:json', function(){
+  return gulp.src([paths.src.base+paths.src.projects])
+  .pipe(plugins.frontMatter({property: 'meta'}))
+  .pipe(plugins.data(function(file){
+    file.meta.path = file.path
+  }))
+  .pipe(plugins.pluck('meta', 'projects.json'))
+  .pipe(plugins.data(function(file){
+    file.contents = new Buffer(JSON.stringify(file.meta))
+  }))
+  .pipe(gulp.dest(paths.target.base+paths.target.projects));
+});
+
+gulp.task('markup:blog',['blog:json'], function(){
 	return gulp.src([paths.src.base+paths.src.blog])
 		.pipe(plugins.frontMatter())
 		.pipe(plugins.markdown())
 		.pipe(plugins.layout(function(file){
 			return file.frontMatter;
-		})).pipe(gulp.dest(paths.target.base+paths.target.blog));
+		}))
+		.pipe(gulp.dest(paths.target.base+paths.target.blog));
 });
 
 
