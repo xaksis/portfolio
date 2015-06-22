@@ -6,6 +6,8 @@
     "gulp": "^3.9.0",
     "gulp-cache": "^0.2.10",
     "gulp-concat": "^2.5.2",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-handlebars": "^4.0.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.0",
     "gulp-layout": "^0.0.3",
