@@ -1,7 +1,5 @@
 ---
-title: Blog 1
+title: Portfolio Project
+type: project
 layout: ./src/markup/layout/blog.handlebars
 ---
-
-# This is my header
-
