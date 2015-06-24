@@ -7,7 +7,7 @@ var plugins = require('gulp-load-plugins')({
 var paths = {
 	src: {
 		base: 'src/',
-		images: 'src/images/**/*',
+		img: 'images/**/*',
 		sass: 'sass/base.scss',
 		js:   'js/**/*.js',
 		projects: 'markup/projects/**/*.md',
@@ -23,7 +23,7 @@ var paths = {
 		base: 'dist/',
 		css: 'css/',
 		js: 'js/',
-		images: 'images/',
+		img: 'images/',
 		blog: 'content/blog/',
 		projects: 'content/projects/',
 		deisgn: 'content/design/'
@@ -40,7 +40,8 @@ gulp.task('style', function () {
 		    })))
 		.pipe(plugins.concat('main.css'))
     	.pipe(plugins.minifyCss())
-    	.pipe(gulp.dest(paths.target.base+paths.target.css));
+    	.pipe(gulp.dest(paths.target.base+paths.target.css))
+    	.pipe(plugins.connect.reload());
 });
 
 //script
@@ -55,14 +56,16 @@ gulp.task('script', function(){
 			.pipe(plugins.concat('main.js'))
 			.pipe(plugins.uglify())
 		.pipe(plugins.sourcemaps.write())
-		.pipe(gulp.dest(paths.target.base+paths.target.js));
+		.pipe(gulp.dest(paths.target.base+paths.target.js))
+    	.pipe(plugins.connect.reload());
 });
 
 //markup this is possibly 
 //the most complicated bit
 gulp.task('markup:base', function(){
 	return gulp.src([paths.src.base+'*.html'])
-		.pipe(gulp.dest(paths.target.base));
+		.pipe(gulp.dest(paths.target.base))
+    	.pipe(plugins.connect.reload());
 });
 
 /*
@@ -82,11 +85,13 @@ function dumpJson(directory){
 }
 
 gulp.task('blog:json', function(){
-	return dumpJson('blog');
+	return dumpJson('blog')
+    	.pipe(plugins.connect.reload());
 });
 
 gulp.task('projects:json', function(){
-	return dumpJson('projects');
+	return dumpJson('projects')
+    	.pipe(plugins.connect.reload());
 });
 
 /**********************************************/
@@ -98,7 +103,8 @@ gulp.task('markup:blog',['blog:json'], function(){
 		.pipe(plugins.layout(function(file){
 			return file.frontMatter;
 		}))
-		.pipe(gulp.dest(paths.target.base+paths.target.blog));
+		.pipe(gulp.dest(paths.target.base+paths.target.blog))
+    	.pipe(plugins.connect.reload());
 });
 
 gulp.task('markup:projects',['projects:json'], function(){
@@ -108,15 +114,17 @@ gulp.task('markup:projects',['projects:json'], function(){
 		.pipe(plugins.layout(function(file){
 			return file.frontMatter;
 		}))
-		.pipe(gulp.dest(paths.target.base+paths.target.projects));
+		.pipe(gulp.dest(paths.target.base+paths.target.projects))
+    	.pipe(plugins.connect.reload());
 });
 
 
 //Images
 gulp.task('images', function() {
-  return gulp.src(paths.src.base+paths.src.images)
+  return gulp.src(paths.src.base+paths.src.img)
     .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(paths.target.base+paths.target.images));
+    .pipe(gulp.dest(paths.target.base+paths.target.img))
+    	.pipe(plugins.connect.reload());
 });
 
 // Clean
@@ -124,17 +132,24 @@ gulp.task('clean', function(cb) {
     return plugins.del([paths.target.base], cb);
 });
 
+gulp.task('connect', function(){
+	plugins.connect.server({
+		root: [paths.target.base],
+		livereload: true
+	});
+});
+
 gulp.task('default',['clean'], function(){
 	gulp.start('style', 'script', 'markup:base', 'markup:blog', 
-		'markup:projects', 'images', 'watch');
+		'markup:projects', 'images', 'connect', 'watch');
 });
 
 gulp.task('watch', function(){
-	gulp.watch(paths.src.base+paths.src.sass, ['style']);
+	gulp.watch(paths.src.base+'sass/**/*.scss', ['style']);
 	gulp.watch(paths.src.base+paths.src.js, ['script']);
 	gulp.watch(paths.src.base+'*.html', ['markup:base']);
 	gulp.watch(paths.src.base+paths.src.blog, ['markup:blog']);
 	gulp.watch(paths.src.base+paths.src.projects, ['markup:projects']);
 	gulp.watch(paths.src.base+paths.src.layout, ['makrup:blog','markup:projects']);
-	gulp.watch(paths.src.base+paths.src.images, ['images']);
+	gulp.watch(paths.src.base+paths.src.img, ['images']);
 });
