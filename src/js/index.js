@@ -26,7 +26,6 @@
 				coordinates.push(coord);
 			}
 			adjustArea(noOfCards, cardsPerRow);
-
 			return coordinates;
 		};
 

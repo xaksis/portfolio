@@ -51,6 +51,10 @@ gulp.task('script', function(){
 	return plugins.streamqueue({objectMode: true},
 			//vendor files first
 			gulp.src(paths.vendor.js),
+			//project specific js files
+			gulp.src([paths.src.base+paths.src.js])
+			.pipe(plugins.jshint())
+			.pipe(plugins.jshint.reporter('default')),
 			//templates
 			gulp.src([paths.src.base+paths.src.templates])
 			    .pipe(plugins.handlebars())
@@ -59,11 +63,7 @@ gulp.task('script', function(){
 			      namespace: 'pApp.templates',
 			      noRedeclare: true, // Avoid duplicate declarations 
 			    }))
-			    .pipe(plugins.concat('templates.js')),
-			//project specific js files
-			gulp.src([paths.src.base+paths.src.js])
-			.pipe(plugins.jshint())
-			.pipe(plugins.jshint.reporter('default'))
+			    .pipe(plugins.concat('templates.js'))
 		)
 		.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.concat('main.js'))
