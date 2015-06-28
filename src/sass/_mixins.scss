@@ -1,0 +1,4 @@
+//_mixins
+@mixin shadow(){
+	box-shadow: $text-disabled 0px 0px 2px;
+}

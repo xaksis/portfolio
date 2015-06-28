@@ -7,6 +7,8 @@ var plugins = require('gulp-load-plugins')({
 var paths = {
 	src: {
 		base: 'src/',
+		allMd: 'markup/**/*.md',
+		templates: 'markup/templates/**/*.hbs',
 		img: 'images/**/*',
 		sass: 'sass/base.scss',
 		js:   'js/**/*.js',
@@ -47,10 +49,21 @@ gulp.task('style', function () {
 //script
 gulp.task('script', function(){
 	return plugins.streamqueue({objectMode: true},
+			//vendor files first
+			gulp.src(paths.vendor.js),
+			//templates
+			gulp.src([paths.src.base+paths.src.templates])
+			    .pipe(plugins.handlebars())
+			    .pipe(plugins.wrap('Handlebars.template(<%= contents %>)'))
+			    .pipe(plugins.declare({
+			      namespace: 'pApp.templates',
+			      noRedeclare: true, // Avoid duplicate declarations 
+			    }))
+			    .pipe(plugins.concat('templates.js')),
+			//project specific js files
 			gulp.src([paths.src.base+paths.src.js])
 			.pipe(plugins.jshint())
-			.pipe(plugins.jshint.reporter('default')),
-			gulp.src(paths.vendor.js)
+			.pipe(plugins.jshint.reporter('default'))
 		)
 		.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.concat('main.js'))
@@ -72,31 +85,38 @@ gulp.task('markup:base', function(){
 * function to generate json
 ***********************************/
 function dumpJson(directory){
-	return gulp.src([paths.src.base+paths.src[directory]])
+	return gulp.src(paths.src.base+paths.src[directory], {base: paths.src.base})
 		.pipe(plugins.frontMatter({property: 'meta'}))
 		.pipe(plugins.data(function(file){
-			file.meta.path = file.path
+			file.meta.path = file.relative;
+			file.meta.createDate = file.stat.ctime;
 		}))
 		.pipe(plugins.pluck('meta', directory+'.json'))
 		.pipe(plugins.data(function(file){
 			file.contents = new Buffer(JSON.stringify(file.meta))
 		}))
-		.pipe(gulp.dest(paths.target.base+paths.target[directory]));
+		//.pipe(gulp.dest(paths.target.base+paths.target[directory]));
+		.pipe(gulp.dest(paths.target.base+'content/'));
 }
 
-gulp.task('blog:json', function(){
-	return dumpJson('blog')
-    	.pipe(plugins.connect.reload());
-});
+// gulp.task('blog:json', function(){
+// 	return dumpJson('blog')
+//     	.pipe(plugins.connect.reload());
+// });
 
-gulp.task('projects:json', function(){
-	return dumpJson('projects')
+// gulp.task('projects:json', function(){
+// 	return dumpJson('projects')
+//     	.pipe(plugins.connect.reload());
+// });
+
+gulp.task('contentJson', function(){
+	return dumpJson('allMd')
     	.pipe(plugins.connect.reload());
 });
 
 /**********************************************/
 
-gulp.task('markup:blog',['blog:json'], function(){
+gulp.task('markup:blog', function(){
 	return gulp.src([paths.src.base+paths.src.blog])
 		.pipe(plugins.frontMatter())
 		.pipe(plugins.markdown())
@@ -107,7 +127,7 @@ gulp.task('markup:blog',['blog:json'], function(){
     	.pipe(plugins.connect.reload());
 });
 
-gulp.task('markup:projects',['projects:json'], function(){
+gulp.task('markup:projects', function(){
 	return gulp.src([paths.src.base+paths.src.projects])
 		.pipe(plugins.frontMatter())
 		.pipe(plugins.markdown())
@@ -140,16 +160,17 @@ gulp.task('connect', function(){
 });
 
 gulp.task('default',['clean'], function(){
-	gulp.start('style', 'script', 'markup:base', 'markup:blog', 
-		'markup:projects', 'images', 'connect', 'watch');
+	gulp.start('style', 'script', 'contentJson', 
+		'markup:base', 'markup:blog', 'markup:projects', 
+		'images', 'connect', 'watch');
 });
 
 gulp.task('watch', function(){
 	gulp.watch(paths.src.base+'sass/**/*.scss', ['style']);
-	gulp.watch(paths.src.base+paths.src.js, ['script']);
+	gulp.watch([paths.src.base+paths.src.js, paths.src.base+paths.src.templates], ['script']);
 	gulp.watch(paths.src.base+'*.html', ['markup:base']);
 	gulp.watch(paths.src.base+paths.src.blog, ['markup:blog']);
 	gulp.watch(paths.src.base+paths.src.projects, ['markup:projects']);
-	gulp.watch(paths.src.base+paths.src.layout, ['makrup:blog','markup:projects']);
+	gulp.watch(paths.src.base+paths.src.layout, ['markup:blog','markup:projects']);
 	gulp.watch(paths.src.base+paths.src.img, ['images']);
 });

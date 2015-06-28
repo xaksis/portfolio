@@ -9,6 +9,7 @@
     "gulp-concat": "^2.5.2",
     "gulp-connect": "^2.2.0",
     "gulp-data": "^1.2.0",
+    "gulp-declare": "^0.3.0",
     "gulp-front-matter": "^1.2.3",
     "gulp-handlebars": "^4.0.0",
     "gulp-imagemin": "^2.3.0",
@@ -24,6 +25,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.5",
     "gulp-watch": "^4.2.4",
+    "gulp-wrap": "^0.11.0",
     "node-bourbon": "^4.2.3",
     "streamqueue": "^1.1.0"
   }

@@ -1,0 +1,35 @@
+//cards
+.update-card{
+	position: absolute;
+	overflow: hidden;
+	width: 0px;
+	height: 0px;
+	margin: 175px;
+	@include transition(all 0.6s ease-in-out);
+	&.shown{
+		width: 350px;
+		height: 300px;
+		margin: 0px;
+		padding: $default-padding;
+		background: white;
+		border: 1px solid $border;
+	}
+}
+
+.card__footer{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: $default-padding;
+	h5, p{
+		margin: 0px;
+		font-size: 14px;
+	}
+	h5{
+		font-weight: 700;
+	}
+	p{
+		color: $text-secondary;
+	}
+}
