@@ -34,6 +34,54 @@
 		};
 	})();
 
+	var filter_m = (function(){
+		var allData = [], filtered = [];
+		
+		var initialize = function(data){
+			allData = data;
+			addHandlers();
+		};
+
+		var addHandlers = function(){
+			$('.js-blog-link').on('click', function(){
+				filter('blog');
+				return false;
+			});
+			$('.js-project-link').on('click', function(){
+				filter('project');
+				return false;
+			});
+			$('.js-design-link').on('click', function(){
+				filter('design');
+				return false;
+			});
+			$('.js-experiment-link').on('click', function(){
+				filter('experiment');
+				return false;
+			});
+		};
+
+		var filter = function(type){
+			//filtered = _.pluck(_.where(allData, { 'type': 'blog' }));
+			console.log('filtering...');
+			filtered = _.filter(allData, function(value){
+				return value.type != type;
+			});
+			console.log(filtered.length);
+			for(var i=filtered.length-1; i>=0; i--){
+				console.log(_.findIndex(allData, filtered[i]));
+				$('.update-card.shown')
+					.eq(_.findIndex(allData, filtered[i]))
+						.removeClass('shown');
+			}
+		};
+
+		return{
+			init: initialize
+		};
+	})();
+
+
 	var content_m = (function(){
 		var data = [], //data for each card
 			coordinates = [],
@@ -48,7 +96,13 @@
 		var read = function(){
 			$.getJSON('content/allMd.json', function( fetched_data ){
 				data = fetched_data;
+				data = _.sortBy(data, function(n){
+					var cdate = moment(n.createDate);
+					n.prettyDate = cdate.calendar();
+					return -cdate.valueOf();
+				});
 				renderAllCards();
+				filter_m.init(data);				
 			});
 		};
 
@@ -57,12 +111,6 @@
 			$('.update-card.shown').each(function(i){
 				$(this).css('top', coordinates[i].top+'px');
 				$(this).css('left', coordinates[i].left+'px');
-			});
-			$('.update-card.shown').each(function(){
-				var self = $(this);
-				self.on('click', function(){
-					self.toggleClass('shown');
-				});
 			});
 		};
 

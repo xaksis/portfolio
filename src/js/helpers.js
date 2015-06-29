@@ -16,3 +16,7 @@ Handlebars.registerHelper("typeIcon", function(type) {
 	} 
 	return '<img src="'+imgSrc+'" />';
 });
+
+Handlebars.registerHelper("getHtmlPath", function(rawPath) {
+	return rawPath.substr(0, rawPath.lastIndexOf('.'))+'.html';
+});
