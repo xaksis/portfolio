@@ -42,38 +42,53 @@
 			addHandlers();
 		};
 
+		function highlight(dom){
+			$('.main-menu__link').each(function(){
+				$(this).removeClass('active');
+			});
+			dom.addClass('active');
+		}
+
 		var addHandlers = function(){
 			$('.js-blog-link').on('click', function(){
+				highlight($(this));
 				filter('blog');
 				return false;
 			});
 			$('.js-project-link').on('click', function(){
+				highlight($(this));
 				filter('project');
 				return false;
 			});
 			$('.js-design-link').on('click', function(){
+				highlight($(this));
 				filter('design');
 				return false;
 			});
 			$('.js-experiment-link').on('click', function(){
+				highlight($(this));
 				filter('experiment');
 				return false;
 			});
 		};
 
 		var filter = function(type){
-			//filtered = _.pluck(_.where(allData, { 'type': 'blog' }));
 			console.log('filtering...');
 			filtered = _.filter(allData, function(value){
 				return value.type != type;
 			});
-			console.log(filtered.length);
+			//show everything first
+			$('.update-card').each(function(){
+				$(this).addClass('shown');
+			});
 			for(var i=filtered.length-1; i>=0; i--){
-				console.log(_.findIndex(allData, filtered[i]));
 				$('.update-card.shown')
 					.eq(_.findIndex(allData, filtered[i]))
 						.removeClass('shown');
 			}
+			setTimeout(function(){
+				content_m.adjust();
+			}, 200);
 		};
 
 		return{
@@ -134,7 +149,8 @@
 		};
 
 		return {
-			init: initialize	
+			init: initialize,
+			adjust: adjustCoords
 		};
 	})();
 

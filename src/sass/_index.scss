@@ -56,7 +56,7 @@
 		}
 	}
 	&:hover,&.active{
-		background: $divider;
+		background: $highlight-background;
 		span{
 			color: $text-primary;
 		}
