@@ -6,7 +6,7 @@
 			cardHeight = 300,
 			margin = 20, 
 			updateArea = $('.js-home-content'),
-			win = $(window);
+			win = $('.main-content');
 
 		var adjustArea = function(noOfCards, cardsPerRow){
 			var lastRowTop = coordinates[noOfCards-1].top + cardHeight + 20;
@@ -65,11 +65,18 @@
 				filter('design');
 				return false;
 			});
-			$('.js-experiment-link').on('click', function(){
+			$('.js-all-link').on('click', function(){
 				highlight($(this));
-				filter('experiment');
+				showAll();
 				return false;
 			});
+		};
+
+		var showAll = function(){
+			$('.update-card').each(function(){
+				$(this).addClass('shown');
+			});
+			content_m.adjust();
 		};
 
 		var filter = function(type){
@@ -77,10 +84,12 @@
 			filtered = _.filter(allData, function(value){
 				return value.type != type;
 			});
+			console.log(filtered.length);
 			//show everything first
 			$('.update-card').each(function(){
 				$(this).addClass('shown');
 			});
+			content_m.adjust();
 			for(var i=filtered.length-1; i>=0; i--){
 				$('.update-card.shown')
 					.eq(_.findIndex(allData, filtered[i]))

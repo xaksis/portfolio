@@ -1,17 +1,55 @@
+.main-content{
+	margin-left: 300px;
+}
+
+.sidebar{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 280px;
+	background: $color-ramp-60;
+}
+
+.sidebar__profile{
+	margin-top: 20px;
+	padding: 20px;
+	position: relative;
+	padding-left: 90px;
+	h2{
+		margin: 0px;
+		font-size: 18px;
+		color: $color-ramp-140;
+		line-height: 1;
+	}
+	.email-link{
+		font-size: 14px;
+		color: $color-ramp-110;
+		margin-top: 5px;
+		line-height: 1;
+	}
+}
+
+.sidebar__profile__image{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 1px solid $color-ramp-50;
+	img{
+		width: 120%;
+		margin-top: -5px;
+		margin-left: -5px;
+	}
+}
+
 .home-header{
 	position: relative;
 	width: 100%;
 	padding-top: 1px;
-}
-
-.home-header__name{
-	width: 300px;
-	position: absolute;
-	left: 50%;
-	margin-left: -150px;
-	text-align: center;
-	top: 20px;
-	font-weight: 300;
 }
 
 .main-menu{
@@ -19,15 +57,31 @@
 	left: 50%;
 	margin-left: -250px;
 	position: absolute;
-	top: 80px;
+	top: 30px;
 	text-align: center;
+	// &:after, &:before{
+	// 	content: '';
+	// 	position: absolute;
+	// 	height: 1px;
+	// 	width: 400px;
+	// 	left: 50%;
+	// 	margin-left: -200px;
+	// }
+	// &:after{
+	// 	top: -10px;
+	// 	background: $border;
+	// }
+	// &:before{
+	// 	top: -9px;
+	// 	background: white;
+	// }
 }
 
 .main-menu__link{
 	display: inline-block;
 	position: relative;
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	text-align: center;
 	margin-right: 30px;
@@ -37,7 +91,7 @@
 	@include transition-timing-function(ease-out);
 	img{
 		width: 80%;
-		margin-top: 8px;
+		margin-top: 6px;
 		display: inline-block;
 	}
 	span{
@@ -49,9 +103,9 @@
 		text-align: center;
 		color: #777;
 	}
-	&:nth-child(2){
+	&:nth-child(3){
 		img{
-			margin-top: 16px;
+			margin-top: 12px;
 			width: 65%;
 		}
 	}
@@ -64,7 +118,7 @@
 }
 
 .home-content{
-	margin-top: 230px;
+	margin-top: 170px;
 	margin-left: 15px;
 	padding: $default-padding;
 	position: relative;
