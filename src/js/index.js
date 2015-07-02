@@ -26,7 +26,6 @@
 				coordinates.push(coord);
 			}
 			adjustArea(noOfCards, cardsPerRow);
-
 			return coordinates;
 		};
 
@@ -34,6 +33,69 @@
 			get: initialize
 		};
 	})();
+
+	var filter_m = (function(){
+		var allData = [], filtered = [];
+		
+		var initialize = function(data){
+			allData = data;
+			addHandlers();
+		};
+
+		function highlight(dom){
+			$('.main-menu__link').each(function(){
+				$(this).removeClass('active');
+			});
+			dom.addClass('active');
+		}
+
+		var addHandlers = function(){
+			$('.js-blog-link').on('click', function(){
+				highlight($(this));
+				filter('blog');
+				return false;
+			});
+			$('.js-project-link').on('click', function(){
+				highlight($(this));
+				filter('project');
+				return false;
+			});
+			$('.js-design-link').on('click', function(){
+				highlight($(this));
+				filter('design');
+				return false;
+			});
+			$('.js-experiment-link').on('click', function(){
+				highlight($(this));
+				filter('experiment');
+				return false;
+			});
+		};
+
+		var filter = function(type){
+			console.log('filtering...');
+			filtered = _.filter(allData, function(value){
+				return value.type != type;
+			});
+			//show everything first
+			$('.update-card').each(function(){
+				$(this).addClass('shown');
+			});
+			for(var i=filtered.length-1; i>=0; i--){
+				$('.update-card.shown')
+					.eq(_.findIndex(allData, filtered[i]))
+						.removeClass('shown');
+			}
+			setTimeout(function(){
+				content_m.adjust();
+			}, 200);
+		};
+
+		return{
+			init: initialize
+		};
+	})();
+
 
 	var content_m = (function(){
 		var data = [], //data for each card
@@ -49,7 +111,13 @@
 		var read = function(){
 			$.getJSON('content/allMd.json', function( fetched_data ){
 				data = fetched_data;
+				data = _.sortBy(data, function(n){
+					var cdate = moment(n.createDate);
+					n.prettyDate = cdate.calendar();
+					return -cdate.valueOf();
+				});
 				renderAllCards();
+				filter_m.init(data);				
 			});
 		};
 
@@ -58,12 +126,6 @@
 			$('.update-card.shown').each(function(i){
 				$(this).css('top', coordinates[i].top+'px');
 				$(this).css('left', coordinates[i].left+'px');
-			});
-			$('.update-card.shown').each(function(){
-				var self = $(this);
-				self.on('click', function(){
-					self.toggleClass('shown');
-				});
 			});
 		};
 
@@ -87,7 +149,8 @@
 		};
 
 		return {
-			init: initialize	
+			init: initialize,
+			adjust: adjustCoords
 		};
 	})();
 

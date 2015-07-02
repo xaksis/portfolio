@@ -1,5 +1,6 @@
 ---
 title: Blog 2
+type: blog
 layout: ./src/markup/layout/blog.handlebars
 ---
 

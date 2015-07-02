@@ -1,7 +1,7 @@
 ---
 title: YoGoals - An Angular Project
 description: An angular project driven by a django backend
-type: Project
+type: project
 layout: ./src/markup/layout/blog.handlebars
 ---
 

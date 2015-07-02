@@ -51,6 +51,10 @@ gulp.task('script', function(){
 	return plugins.streamqueue({objectMode: true},
 			//vendor files first
 			gulp.src(paths.vendor.js),
+			//project specific js files
+			gulp.src([paths.src.base+paths.src.js])
+			.pipe(plugins.jshint())
+			.pipe(plugins.jshint.reporter('default')),
 			//templates
 			gulp.src([paths.src.base+paths.src.templates])
 			    .pipe(plugins.handlebars())
@@ -59,11 +63,7 @@ gulp.task('script', function(){
 			      namespace: 'pApp.templates',
 			      noRedeclare: true, // Avoid duplicate declarations 
 			    }))
-			    .pipe(plugins.concat('templates.js')),
-			//project specific js files
-			gulp.src([paths.src.base+paths.src.js])
-			.pipe(plugins.jshint())
-			.pipe(plugins.jshint.reporter('default'))
+			    .pipe(plugins.concat('templates.js'))
 		)
 		.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.concat('main.js'))
@@ -85,11 +85,11 @@ gulp.task('markup:base', function(){
 * function to generate json
 ***********************************/
 function dumpJson(directory){
-	return gulp.src(paths.src.base+paths.src[directory], {base: paths.src.base})
+	return gulp.src(paths.src.base+paths.src[directory], {base: paths.src.base + 'markup'})
 		.pipe(plugins.frontMatter({property: 'meta'}))
 		.pipe(plugins.data(function(file){
 			file.meta.path = file.relative;
-			file.meta.createDate = file.stat.ctime;
+			file.meta.createDate = file.stat.birthtime;
 		}))
 		.pipe(plugins.pluck('meta', directory+'.json'))
 		.pipe(plugins.data(function(file){
@@ -170,7 +170,7 @@ gulp.task('watch', function(){
 	gulp.watch([paths.src.base+paths.src.js, paths.src.base+paths.src.templates], ['script']);
 	gulp.watch(paths.src.base+'*.html', ['markup:base']);
 	gulp.watch(paths.src.base+paths.src.blog, ['markup:blog']);
-	gulp.watch(paths.src.base+paths.src.projects, ['markup:projects']);
+	gulp.watch(paths.src.base+paths.src.projects, ['markup:projects', 'contentJson']);
 	gulp.watch(paths.src.base+paths.src.layout, ['markup:blog','markup:projects']);
 	gulp.watch(paths.src.base+paths.src.img, ['images']);
 });
