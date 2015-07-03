@@ -8,16 +8,6 @@ $orange: #ffab00;
 $yellow: #fee68c;
 $blue: #b7dcfe;
 
-$text-primary: #212121;
-$text-secondary: #727272;
-$text-disabled: #b8b8b8;
-$divider: #dadada;
-$border: #e6e7e8;
-
-$default-background: #f8f9fa;
-$highlight-background: #e0e0e0;
-$dark-background: #616161;
-
 
 //ramp
 $color-ramp-10: #16161F;
@@ -37,6 +27,15 @@ $color-ramp-140: #D5D5D8;
 $color-ramp-150: #EAEAEC;
 $color-ramp-160: #FFFFFF;
 
+$text-primary: #212121;
+$text-secondary: #727272;
+$text-disabled: #b8b8b8;
+$divider: #dadada;
+$border: #e6e7e8;
+
+$default-background: $color-ramp-150;
+$highlight-background: #e0e0e0;
+$dark-background: #616161;
 
 /* Spacing etc
 ***********************/
