@@ -4,6 +4,7 @@
 
 .sidebar{
 	position: fixed;
+	padding: 10px;
 	left: 0px;
 	top: 0px;
 	bottom: 0px;
@@ -43,6 +44,42 @@
 		width: 120%;
 		margin-top: -5px;
 		margin-left: -5px;
+	}
+}
+
+.sidebar__about-me{
+	padding: 10px;
+	p{
+		font-size: 14px;
+		color: $color-ramp-90;
+	}
+}
+
+.contact{
+	text-align: center;
+}
+
+.contact__link{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	text-align: center;
+	background: $color-ramp-40;
+	border-radius: 50%;
+	padding-top: 10px;
+	vertical-align: top;
+	img{
+		width: 80%;
+	}
+	&.linkedin img{
+		margin-top: 5px;
+		width: 60%;
+		margin-left: 3px;
+	}
+	&.github img{
+		width: 60%;
+		margin-top: 3px;
 	}
 }
 
