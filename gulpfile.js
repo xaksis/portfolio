@@ -141,6 +141,7 @@ gulp.task('markup:projects', function(){
 
 //Images
 gulp.task('images', function() {
+	//plugins.cache.clearAll();
   return gulp.src(paths.src.base+paths.src.img)
     .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(paths.target.base+paths.target.img))
