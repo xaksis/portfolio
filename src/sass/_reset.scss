@@ -25,3 +25,6 @@ body{
 	background: $default-background;
 	min-height: 100%;
 }
+body.blog{
+  background: $color-ramp-160;
+}
