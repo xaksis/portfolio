@@ -28,7 +28,7 @@ $color-ramp-150: #EAEAEC;
 $color-ramp-160: #FFFFFF;
 
 $text-primary: #212121;
-$text-secondary: #727272;
+$text-secondary: $color-ramp-110;
 $text-disabled: #b8b8b8;
 $divider: #dadada;
 $border: #e6e7e8;
@@ -39,4 +39,4 @@ $dark-background: #616161;
 
 /* Spacing etc
 ***********************/
-$default-padding: 15px;
+$default-padding: 10px;

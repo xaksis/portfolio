@@ -1,5 +1,6 @@
 ---
 title: YoGoals - An Angular Project
+img: images/yogoals.png
 description: An angular project driven by a django backend
 type: project
 layout: ./src/markup/layout/blog.handlebars

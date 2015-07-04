@@ -30,6 +30,8 @@
 	}
 	h5{
 		font-weight: 400;
+		color: $color-ramp-80;
+		font-weight: bold;
 	}
 	p{
 		color: $text-secondary;
@@ -50,12 +52,15 @@
 
 .card__icon{
 	position: absolute;
-	left: 0px;
-	top: -7px;
+	left: 10px;
+	top: -4px;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	background: $border;
+	z-index: 10;
+	background: $color-ramp-160;
+	border: 4px solid $color-ramp-160;
+	box-sizing: content-box;
 	// border: 1px solid $border;
 	img{
 		width: 80%;
@@ -63,6 +68,22 @@
 		margin-top: 3px;
 	}
 
+}
+
+.card__image-holder{
+	overflow: hidden;
+	margin-top: 23px;
+	height: 205px;
+	position: relative;
+	img{
+	  position: absolute; 
+	  top: 0; 
+	  left: 0; 
+	  right: 0; 
+	  bottom: 0; 
+	  margin: auto; 
+	  max-width: 100%;
+	}
 }
 
 .card__info{
