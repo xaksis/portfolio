@@ -1,7 +1,24 @@
+body.blog{
+  font-family: 'Open Sans', sans-serif;
+  background: $color-ramp-160;
+  text-align: justify;
+  color: $color-ramp-60;
+  p{
+    font-weight: 400;
+  }
+  h1{
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 700;
+  	text-align: center;
+  }
+}
 .blog-content{
 	max-width: 46em;
 	background: $color-ramp-160;
 	padding: 15px;
 	margin-left: auto;
 	margin-right: auto;
+	img{
+		width: 100%;
+	}
 }

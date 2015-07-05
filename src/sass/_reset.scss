@@ -1,9 +1,9 @@
 // _reset.scss
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 html,
 body,
-ul,
-ol {
+{
    margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -24,8 +24,4 @@ html{
 body{
 	background: $default-background;
 	min-height: 100%;
-}
-body.blog{
-  background: $color-ramp-160;
-  text-align: justify;
 }
