@@ -13,7 +13,7 @@
 		padding: $default-padding;
 		background: $color-ramp-160;
 		border: 1px solid $color-ramp-150;
-		border-radius: 4px;
+		border-radius: $card-border-radius;
 	}
 	&:hover{
 		border: 1px solid transparent;
