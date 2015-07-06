@@ -21,6 +21,7 @@ var paths = {
 		css: 'src/vendor/**/*.css',
 		js: 'src/vendor/**/*.js'
 	},
+	icon: 'src/vendor/icons/**/*',
 	target: {
 		base: 'dist/',
 		css: 'css/',
@@ -32,10 +33,15 @@ var paths = {
 	}
 };
 
+gulp.task('icons', function(){
+	return gulp.src([paths.icon])
+		.pipe(gulp.dest(paths.target.base+paths.target.css));
+});
+
 //style
 gulp.task('style', function () {
 	return plugins.streamqueue({objectMode: true},
-			gulp.src(paths.vendor.css),
+			gulp.src([paths.vendor.css, '!'+paths.icon]),
 			gulp.src(paths.src.base+paths.src.sass)
 		    .pipe(plugins.sass({
 		      includePaths: require('node-bourbon').includePaths
@@ -161,7 +167,7 @@ gulp.task('connect', function(){
 });
 
 gulp.task('default',['clean'], function(){
-	gulp.start('style', 'script', 'contentJson', 
+	gulp.start('style', 'script', 'icons', 'contentJson', 
 		'markup:base', 'markup:blog', 'markup:projects', 
 		'images', 'connect', 'watch');
 });

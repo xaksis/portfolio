@@ -15,18 +15,18 @@ body.blog{
   }
   h1.blog-title{
   	text-align: center;
-  	font-size: 50px;	
+  	font-size: 40px;	
   }
 }
 
 .blog-content{
 	max-width: 46em;
 	background: $color-ramp-160;
-	padding: 15px;
+	padding: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	img{
-		width: 100%;
+		max-width: 100%;
 	}
 }
 

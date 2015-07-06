@@ -65,21 +65,19 @@
 	height: 60px;
 	margin-right: 10px;
 	text-align: center;
-	background: $color-ramp-40;
+	background: $color-ramp-50;
 	border-radius: 50%;
 	padding-top: 10px;
 	vertical-align: top;
-	img{
-		width: 80%;
+	i{
+		font-size: 30px;
+		color: $color-ramp-90;
+		@include transition(color 0.3s ease-out);
 	}
-	&.linkedin img{
-		margin-top: 5px;
-		width: 60%;
-		margin-left: 3px;
-	}
-	&.github img{
-		width: 60%;
-		margin-top: 3px;
+	&:hover{
+		i{
+			color: $color-ramp-150;
+		}
 	}
 }
 

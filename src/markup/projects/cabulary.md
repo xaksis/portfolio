@@ -8,7 +8,7 @@ layout: ./src/markup/layout/blog.handlebars
 
 ![Cabulary cover Image](../../images/projects/cabulary/920x680.png)
 
-<div class="button-rack"><a href="https://chrome.google.com/webstore/detail/cabulary/ejefgmegpcimohilbkiioplokdiangpd" target="_blank" class="btn btn-primary">Extension Link</a><a href="https://chrome.google.com/webstore/detail/cabulary/ejefgmegpcimohilbkiioplokdiangpd" target="_blank" class="btn btn-default">Github Link</a></div>
+<div class="button-rack"><a href="https://chrome.google.com/webstore/detail/cabulary/ejefgmegpcimohilbkiioplokdiangpd" target="_blank" class="btn btn-primary"><i class="fi-monitor"></i> Extension Link</a><a href="https://github.com/xaksis/cabulary" target="_blank" class="btn btn-default"><i class="fi-social-github"></i> Github Link</a></div>
 
 
 
