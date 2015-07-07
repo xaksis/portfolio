@@ -1,5 +1,5 @@
 (function($){
-	$(function(){
+	$(window).load(function(){
 
 	var coord_m = (function(){
 		var coordinates = [],
