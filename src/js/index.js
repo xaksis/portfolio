@@ -11,9 +11,12 @@
 		var adjustArea = function(noOfCards, cardsPerRow){
 			var lastRowTop = coordinates[noOfCards-1].top + cardHeight + 20;
 			updateArea.height(lastRowTop);
-			var cardsWidth = cardsPerRow*(cardWidth+margin);
-			var areaMargin = (win.width()-cardsWidth)/2;
-			updateArea.css('margin-left', areaMargin+'px');
+			var cardsWidth = cardsPerRow*(cardWidth+margin)===0?350:cardsPerRow*(cardWidth+margin);
+			var extraSpace = win.width()-cardsWidth;
+			if(extraSpace > 0){
+				var areaMargin = (extraSpace)/2;
+				updateArea.css('margin-left', areaMargin+'px');
+			}
 		};
 
 		var initialize = function(noOfCards){
