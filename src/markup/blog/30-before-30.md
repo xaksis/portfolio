@@ -14,9 +14,9 @@ Recently a friend showed me a list of things he wanted to accomplish before he t
 
 # My List
 
-1. Learn how to swim (May, 2012)
+1. ~~Learn how to swim~~ (May, 2012)
 2. Swim 250m non-stop freestyle
-3. Jump from a plane and Freefall at 120 mph (Sep 14, 2013)
+3. [~~Jump from a plane and Freefall at 120 mph~~](freefall.html) (Sep 14, 2013)
 4. Visit every continent
 5. Hike up Machu Pichu in Peru
 6. Camping trip around Iceland (July, 2012: Thankyou +Guðbjört Gylfadóttir)
@@ -24,18 +24,19 @@ Recently a friend showed me a list of things he wanted to accomplish before he t
 8. Learn how to ski/snowboard
 9. Take parents to Vancouver & Banff
 10. Get certified for Scuba 
-11. Complete a 100 mile bike event (Oct 21, 2012: 7 hours 50 minutes)
+11. [~~Complete a 100 mile bike event~~](cycling.html) (Oct 21, 2012: 7 hours 50 minutes)
 12. Visit 221B baker street
 13. Take a picture with a marine Iguana in Galapagos
 14. Write a poem sitting in Stratford-Upon-Avon
 15. Get a Motorbike license 
-16. Research and create a family tree (June 8th, 2013) 
-17. Fly a plane (March 10, 2013 - Cessna 172s)
+16. ~~Research and create a family tree~~ (June 8th, 2013) 
+17. [~~Fly a plane~~](flying.html) (March 10, 2013 - Cessna 172s)
 18. Photograph the Northern Lights 
 19. Sell one of my sketches 
-20. Stick my hands in biobay water to see the algae glow (May 25, 2013)
+20. ~~Stick my hands in biobay water to see the algae glow~~ (May 25, 2013)
 21. Go Sledding with some huskies! 
 22. Launch a web app of my own
+23. Create and publish a mobile App
 
 This is a rolling list... so I'll continue to add items till I get 30 :)
 
