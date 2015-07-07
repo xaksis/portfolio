@@ -15,14 +15,16 @@ body.blog{
   }
   h1.blog-title{
   	text-align: center;
-  	font-size: 40px;	
+  	font-size: 40px;
+    margin-top: 40px;	
   }
 }
 
 .blog-content{
+  position: relative;
 	max-width: 46em;
+  padding: $default-padding;
 	background: $color-ramp-160;
-	padding: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	img{
@@ -32,6 +34,12 @@ body.blog{
 
 .home-btn{
 	position: absolute;
-	left: 10%;
+	left: -10%;
 	top: 20px;
+}
+
+.article-cover{
+  height: 500px;
+  background-size: cover;
+  background-position: center bottom;
 }

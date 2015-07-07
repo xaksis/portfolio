@@ -95,7 +95,8 @@ function dumpJson(directory){
 		.pipe(plugins.frontMatter({property: 'meta'}))
 		.pipe(plugins.data(function(file){
 			file.meta.path = file.relative;
-			file.meta.createDate = file.stat.birthtime;
+			if(!file.meta.createDate)
+				file.meta.createDate = file.stat.birthtime;
 		}))
 		.pipe(plugins.pluck('meta', directory+'.json'))
 		.pipe(plugins.data(function(file){

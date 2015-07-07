@@ -7,10 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="../../css/main.css">
 </head>
 <body class="blog">
-    <a class="home-btn" href="/"><i class="fi-home"></i> Back to all</a>
     <div class="blog-content">
+        <a class="home-btn" href="/"><i class="fi-arrow-left"></i> Back to all</a>
+        <h1 class="blog-title">Blog 2</h1>
         <article>
-            <h1 class="blog-title">Blog 2</h1>
             <p><h1 id="this-is-my-header">This is my header</h1>
 <h2 id="this-is-my-second-header">This is my second header</h2>
 <h3 id="this-is-my-third-header">This is my third header</h3>
@@ -29,6 +29,13 @@
 </code></pre>
 </p>
         </article>
+        <ul class="share-buttons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcrayonbytes.us&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="../../images/flat_web_icon_set/color/Facebook.png"></a></li>
+          <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcrayonbytes.us&text=:%20http%3A%2F%2Fcrayonbytes.us" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="../../images/flat_web_icon_set/color/Twitter.png"></a></li>
+          <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fcrayonbytes.us" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="../../images/flat_web_icon_set/color/Google+.png"></a></li>
+          <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fcrayonbytes.us&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="../../images/flat_web_icon_set/color/Reddit.png"></a></li>
+          <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcrayonbytes.us&title=&summary=&source=http%3A%2F%2Fcrayonbytes.us" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="../../images/flat_web_icon_set/color/LinkedIn.png"></a></li>
+        </ul>
         <div id="disqus_thread"></div>
     </div>
 <script type="text/javascript">
