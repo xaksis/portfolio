@@ -169,7 +169,7 @@
 	})();
 
 	content_m.init();
-	content_m.adjustCoords();
+	content_m.adjust();
 
 });
 
