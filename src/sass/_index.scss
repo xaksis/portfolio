@@ -159,3 +159,23 @@
 	position: relative;
 	background: $default-background;
 }
+
+.topbar{
+	display: none;
+}
+
+
+@media only screen and (max-width: 40em){
+	.sidebar{
+		display: none;
+	}
+	.topbar{
+		display: block;
+		background: $color-ramp-60;
+		padding-top: 1px;
+		padding-bottom: 20px;
+	}
+	.main-content{
+		margin-left: 0px;
+	}
+}
