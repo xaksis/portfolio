@@ -1,4 +1,6 @@
 (function($){
+	$(function(){
+
 	var coord_m = (function(){
 		var coordinates = [],
 			cardsPerRow = 0,
@@ -167,5 +169,7 @@
 	})();
 
 	content_m.init();
+
+});
 
 })(jQuery);
