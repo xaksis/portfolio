@@ -169,6 +169,7 @@
 	})();
 
 	content_m.init();
+	content_m.adjustCoords();
 
 });
 
