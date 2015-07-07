@@ -23,7 +23,7 @@
 
 		var initialize = function(noOfCards){
 			coordinates = [];
-			cardsPerRow = Math.floor(win.width()/(cardWidth + margin));
+			cardsPerRow = Math.floor(win.width()/(cardWidth + margin))===0?1:Math.floor(win.width()/(cardWidth + margin));
 			for(var i=0; i<noOfCards; i++){
 				var coord = {top: 0, left: 0};
 				coord.top = Math.floor(i/cardsPerRow) * (cardHeight + margin);
@@ -169,7 +169,6 @@
 	})();
 
 	content_m.init();
-	content_m.adjust();
 
 });
 
