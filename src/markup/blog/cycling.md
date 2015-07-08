@@ -2,6 +2,7 @@
 title: 30 before 30 - 0 to 100 miles in a year
 createDate: 2012-11-21T05:29:35.000Z
 description: An account of cycling 100 miles
+img: images/blogs/cycling/bikeTile.jpg
 type: blog
 layout: ./src/markup/layout/blog.handlebars
 ---

@@ -1,6 +1,7 @@
 ---
 title: 30 before 30 - flying a plane
 type: blog
+img: images/blogs/flying/planeTile.jpg
 createDate: 2013-03-10T05:29:35.000Z
 layout: ./src/markup/layout/blog.handlebars
 ---
