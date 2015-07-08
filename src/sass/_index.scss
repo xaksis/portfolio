@@ -88,9 +88,7 @@
 }
 
 .main-menu{
-	width: 500px;
-	left: 50%;
-	margin-left: -250px;
+	width: 100%;
 	position: absolute;
 	top: 30px;
 	text-align: center;
@@ -119,7 +117,7 @@
 	height: 60px;
 	border-radius: 50%;
 	text-align: center;
-	margin-right: 30px;
+	margin-right: 20px;
 	vertical-align: bottom;
 	@include transition-property(background);
 	@include transition-duration(0.3s);
@@ -164,6 +162,11 @@
 	display: none;
 }
 
+// * {
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+// }
 
 @media only screen and (max-width: 45em){
 	.sidebar{
