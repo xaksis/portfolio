@@ -11,14 +11,17 @@
 	<link rel="stylesheet" type="text/css" href="../../css/main.css">
 </head>
 <body class="blog">
+    <a class="home-btn" href="/"><i class="fi-arrow-left"></i></a>
     {{#if coverImg}}
     <div class="article-cover" style="background-image: url('{{coverImg}}')">
         
     </div>
     {{/if}}
+    <h1 class="blog-title">
+        {{title}}
+    </h1>
     <div class="blog-content">
-        <a class="home-btn" href="/"><i class="fi-arrow-left"></i> Back to all</a>
-        <h1 class="blog-title">{{title}}</h1>
+        
         <article>
             <p>{{{contents}}}</p>
         </article>

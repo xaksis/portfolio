@@ -2,11 +2,10 @@
 title: 30 before 30 - flying a plane
 type: blog
 img: images/blogs/flying/planeTile.jpg
+coverImg: ../../images/blogs/flying/flying.jpg
 createDate: 2013-03-10T05:29:35.000Z
 layout: ./src/markup/layout/blog.handlebars
 ---
-
-![Me flying a plane!](../../images/blogs/flying/flying.jpg)
 
 So... you know those kids that from their seminal childhood had this dream to one day fly a plane and soar through the crimson skies? I was never that kid. Don't get me wrong, I loved Top Gun dog fights just as much as any adrenalin loaded pre-teen kid would, but I was never fascinated about the flying part. Nevertheless, it was something that I really wanted to get a taste of, if for no other reason than to know what fascinates people like my brother about flying. 
 
