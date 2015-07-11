@@ -1,9 +1,18 @@
 //share button
-ul.share-buttons{
+ul.share-buttons, ul.like-buttons{
   list-style: none;
   padding: 0;
 }
 
-ul.share-buttons li{
-  display: inline;
+ul.share-buttons li, ul.like-buttons li{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.share-buttons{
+  float: left;
+}
+
+.like-buttons{
+  float: right;
 }

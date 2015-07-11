@@ -168,7 +168,10 @@
 		};
 	})();
 
-	content_m.init();
+	var p = window.location.pathname.split("/");
+	var filename = p[p.length-1];
+	if(!filename || filename === "index.html")
+		content_m.init();
 
 });
 
