@@ -1,18 +1,18 @@
-/* Base16 Atelier Savanna Dark - Theme */
-/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/savanna) */
-/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 
-/* Atelier-Savanna Comment */
+/* Tomorrow Comment */
 .hljs-comment {
-  color: #78877d;
+  color: #969896;
 }
 
-/* Atelier-Savanna Red */
+/* Tomorrow Red */
 .hljs-variable,
 .hljs-attribute,
 .hljs-tag,
 .hljs-regexp,
-.hljs-name,
 .ruby .hljs-constant,
 .xml .hljs-tag .hljs-title,
 .xml .hljs-pi,
@@ -21,42 +21,44 @@
 .css .hljs-id,
 .css .hljs-class,
 .css .hljs-pseudo {
-  color: #b16139;
+  color: #cc6666;
 }
 
-/* Atelier-Savanna Orange */
+/* Tomorrow Orange */
 .hljs-number,
 .hljs-preprocessor,
+.hljs-pragma,
 .hljs-built_in,
 .hljs-literal,
 .hljs-params,
 .hljs-constant {
-  color: #9f713c;
+  color: #de935f;
 }
 
-/* Atelier-Savanna Yellow */
+/* Tomorrow Yellow */
 .ruby .hljs-class .hljs-title,
 .css .hljs-rule .hljs-attribute {
-  color: #a07e3b;
+  color: #f0c674;
 }
 
-/* Atelier-Savanna Green */
+/* Tomorrow Green */
 .hljs-string,
 .hljs-value,
 .hljs-inheritance,
 .hljs-header,
+.hljs-name,
 .ruby .hljs-symbol,
 .xml .hljs-cdata {
-  color: #489963;
+  color: #b5bd68;
 }
 
-/* Atelier-Savanna Aqua */
+/* Tomorrow Aqua */
 .hljs-title,
 .css .hljs-hexcolor {
-  color: #1c9aa0;
+  color: #8abeb7;
 }
 
-/* Atelier-Savanna Blue */
+/* Tomorrow Blue */
 .hljs-function,
 .python .hljs-decorator,
 .python .hljs-title,
@@ -65,39 +67,20 @@
 .perl .hljs-sub,
 .javascript .hljs-title,
 .coffeescript .hljs-title {
-  color: #478c90;
+  color: #81a2be;
 }
 
-/* Atelier-Savanna Purple */
+/* Tomorrow Purple */
 .hljs-keyword,
 .javascript .hljs-function {
-  color: #55859b;
-}
-
-.diff .hljs-deletion,
-.diff .hljs-addition {
-  color: #171c19;
-  display: inline-block;
-  width: 100%;
-}
-
-.diff .hljs-deletion {
-  background-color: #b16139;
-}
-
-.diff .hljs-addition {
-  background-color: #489963;
-}
-
-.diff .hljs-change {
-  color: #478c90;
+  color: #b294bb;
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #171c19;
-  color: #87928a;
+  background: #1d1f21;
+  color: #c5c8c6;
   padding: 0.5em;
   -webkit-text-size-adjust: none;
 }

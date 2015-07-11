@@ -53,18 +53,29 @@ body.blog{
 .home-btn{
 	position: absolute;
 	left: 10px;
-	top: 30px;
+	top: 15px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: $color-ramp-60;
+  background: $color-ramp-40;
   text-align: center;
   font-size: 40px;
   padding-top: 15px;
+  z-index: 10;
 }
 
 .article-cover{
   height: 600px;
   background-size: cover;
   background-position: center bottom;
+}
+
+.hljs{
+  border-radius: 7px;
+  padding: $default-padding;
+  background-color: $color-ramp-40;
+}
+
+.hljs-comment{
+  color: $color-ramp-80;
 }
