@@ -22,7 +22,7 @@ This is so meta! Describing this site as a project that is displayed on this sit
 
 I have wanted to create a simple portfolio site for a while now. I kept delaying it, partly due to procrastination and partly because I always had other projects that appeared to be higher priority, until a few weeks ago.
 
-While working on [Calorious](/calorious.html) I reached a point where I felt like I **had** to take a break from it. Anyone in my profession is well aware of this feeling. Even though you are excited about the project you need to take a step back and regroup. With this realization, I thought why not use this opportunity to do something I've always wanted to do? Build my portfolio site!
+While working on [Calorious](./calorious.html) I reached a point where I felt like I **had** to take a break from it. Anyone in my profession is well aware of this feeling. Even though you are excited about the project you need to take a step back and regroup. With this realization, I thought why not use this opportunity to do something I've always wanted to do? Build my portfolio site!
 
 # Requirements
 Thus, I sat down to create a preliminary list of requirements.
