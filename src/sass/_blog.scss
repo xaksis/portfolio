@@ -70,6 +70,16 @@ body.blog{
   background-position: center bottom;
 }
 
+.mobile-screenshot{
+  display: inline-block;
+  width: 45%;
+  margin-right: 15px;
+  border: 2px solid $color-ramp-140;
+}
+
+/* Syntax Highlight overrides
+**********************************/
+
 .hljs{
   border-radius: 7px;
   padding: $default-padding;
