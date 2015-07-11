@@ -4,6 +4,7 @@ img: images/cabulary.png
 description: Chrome extension to learn vocabulary
 type: project
 layout: ./src/markup/layout/blog.handlebars
+createDate: 2014-12-20T05:29:35.000Z
 ---
 
 ![Cabulary cover Image](../../images/projects/cabulary/920x680.png)

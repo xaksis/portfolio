@@ -14,6 +14,10 @@ layout: ./src/markup/layout/blog.handlebars
 Yogoals provides you with a beautiful and easy way to record and share your major goals in life. Plan and keep track of your goals, find others with the same taste, keep yourself motivated by maintaining a timeline and share your achievements with your friends.
 
 #Stack
+* __Client Side__ - Angular + jQuery + Bootstrap
+* __Backend__ - Django Rest API (Python)
+* __Database__ - mySQL 
+
 
 #Features
 

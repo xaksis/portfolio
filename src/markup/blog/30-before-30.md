@@ -19,7 +19,7 @@ Recently a friend showed me a list of things he wanted to accomplish before he t
 3. [~~Jump from a plane and Freefall at 120 mph~~](freefall.html) (Sep 14, 2013)
 4. Visit every continent
 5. Hike up Machu Pichu in Peru
-6. Camping trip around Iceland (July, 2012: Thankyou +Guðbjört Gylfadóttir)
+6. ~~Camping trip around Iceland~~ (July, 2012: Thankyou +Guðbjört Gylfadóttir)
 7. Drive up the west coast of US
 8. Learn how to ski/snowboard
 9. Take parents to Vancouver & Banff
@@ -29,13 +29,13 @@ Recently a friend showed me a list of things he wanted to accomplish before he t
 13. Take a picture with a marine Iguana in Galapagos
 14. Write a poem sitting in Stratford-Upon-Avon
 15. Get a Motorbike license 
-16. ~~Research and create a family tree~~ (June 8th, 2013) 
+16. [~~Research and create a family tree~~](create-family-tree.html) (June 8th, 2013) 
 17. [~~Fly a plane~~](flying.html) (March 10, 2013 - Cessna 172s)
 18. Photograph the Northern Lights 
 19. Sell one of my sketches 
 20. ~~Stick my hands in biobay water to see the algae glow~~ (May 25, 2013)
 21. Go Sledding with some huskies! 
-22. Launch a web app of my own
+22. [~~Launch a web app of my own~~](../projects/yogoals.html) (December 28, 2013)
 23. Create and publish a mobile App
 
 This is a rolling list... so I'll continue to add items till I get 30 :)
