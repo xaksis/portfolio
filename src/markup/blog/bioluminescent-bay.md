@@ -1,0 +1,33 @@
+---
+title: 30 before 30 - Visit the bioluminescent bay
+createDate: 2013-5-27T05:29:35.000Z
+img: /images/blogs/puerto/flight.jpg
+coverImg: /images/blogs/puerto/ocean.jpg
+description: Watched glowing algae in biobay
+type: blog
+layout: ./src/markup/layout/blog.handlebars
+---
+
+I still remember waiting for those documentaries about animals in the rainforest on Door Darshan. Waiting is perhaps not the right word, since back then I had no idea when they were going to telecast one of these documentaries made in the 80s by some foreign production company. But on certain summer evenings in India, sitting in our living room with the cooler dripping with water and the fan whizzing away blowing hot air down on us, I'd be the happiest kid on the block if I happened to catch one of these shows on the sole channel we had available. These were times when the only purpose of the channel knob on tv was to find where **Door Darshan's** reception was better. Be it about the poisonous frogs in the amazon or about the migratory patterns of white stork *(It's crazy how distinctly I still remember this)*, I used to be glued with amazement to the television set.  
+
+There was something about forests, animals, nature in general that had always gotten me intrigued and fascinated. Due to lack of English vocabulary and career knowledge in general at the time, I wanted to grow up to be a 'forest ranger'. Had I known what I do now, I'd perhaps have used a more fitting career term - Wild Life Photographer... Researcher... etc. Rainforests were my favorite terrain. The sheer density and variety of life in a rainforest made me think of it as nature's Disneyland. I was so sure that one day, I'd call these forests my home, talk to the animals and live happily ever after! 
+
+Well... Being an electrical engineer by education and a financial software developer by profession, you can probably guess that I'm as far away from my original ambition as one possibly can be. The only thing that resembles the chaotic rainforest now in my life is perhaps the codebase I deal with. So this item on my [30 before 30 list](/30-before-30.html) has a special place in my heart. Not only was I going to be in a rainforest but I was also going to see one of nature's most majestic displays - glow algae in biobay.
+
+![flight to puerto rico picture](/images/blogs/puerto/flight.jpg)
+
+Enter **Fajardo, Puerto Rico**. Puerto Rico is probably one of the only places in the world where you can see this phenomena almost every evening! I booked this tour end of May this year. I was under the impression that since I'm booking a proper tour, this will be more like a touristy thing.. but so what... I still get to see one of the most amazing sights right? Even on the van that was taking my group to Fajardo, I did not have a good sense of what exactly we would be doing. I was just going with the flow and excitement of just being in Puerto Rico. I would find out soon that this trip is not fit for all tourists :)
+
+Upon reaching the kayak station I started to get a better picture. We'd be kayaking in pairs in the open ocean for a bit, before we enter the rainforest via mangrove swamps which will lead us into the biobay. I was excited but I'd be lying if I said I wasn't a bit nervous. Those of you following my progress on the 30 before 30 list, know that I only learned how to swim last year. I still can't tread water so I'm not too comfortable about being in open water on a kayak. I thought, well once I'm in the rain forest, I'll feel better.
+
+![atv picture](/images/blogs/puerto/atv.jpg)
+
+So I hopped on to the kayak with a good friend behind me and off we went following others. It was about 6pm dusk approaching, but we could still see each other pretty clearly. I had some kayaking and rowing experience before having worked on the Hudson river one summer of my high school, so things were ok. As we reached the mangrove forest, I realized this wasn't going to be as easy as we thought. The passage way was just wide enough for two kayaks at most and very winding as it snaked its way into the rainforest. What worked in our favor though was the flow of the water that was pushing our kayaks in the direction that we wanted to move. While we were navigating through the channel, I couldn't help but feel giddy about where we were. I was actually in a rainforest, on a kayak paddling my way further in. All my childhood aspirations came flooding into my head... I was doing what I had once dreamt of.
+
+About 20 minutes and 40 mosquito bites later, we were approaching an opening. The darkness had almost completely enveloped us and we were pedaling towards the neon glow of the little ring at the posterior of the kayak in front of us. Pedaling in the open bay was much easier than the channel - there was no risk of being pulled into the mangrove roots. However I couldn't help but feel that we were once again in deep water. Half way through the bay, I could see light far into the forest on some light house and houses on the shore but other than that, it was hard to make out what was around us when suddenly, there was a yelp of joy from somewhere close by.
+
+As I looked down towards where my pedals were hitting the water, I could see an explosion of neon! It took a while for it to actually sink in. I was actually there... I was seeing it first hand. I stopped pedaling and dipped my hand into the water... immediately there were thousands of streaks of lights in my palm. I poured some on my knees... and saw the tiny lights streak down my legs. My partner and I broke off from the pack and pedaled deeper into the bay where at one point we were stunned. As we looked down, there were hundreds if not thousands of fish running away from our kayak... and as they scurried away there were streaks of light in all directions! It is hard to express in words how one feels at a display such as this. All I know is that there have been very few times in my life that I've been so glad for having decided to do something.
+
+And even though our journey back against the currents was tough as hell, even though we witnessed kayaks get stuck into the mangroves and flip over, even though we went through another 50 or so mosquito bites on our way out, that one experience of seeing the magic of nature was worth it! This perhaps was the reason for the involuntary smile I had on my face during the last few pedal strokes that we did in the open ocean, with the bright almost full moon above us, and the white shimmering water all around us. 
+
+With a beautiful memory trapped in my heart and an experience of a lifetime, I hereby mark **Stick my hands in Biobay water To see the algae glow** Complete!

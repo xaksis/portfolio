@@ -1,6 +1,6 @@
 ---
 title: 30 before 30 - A quest to do more
-createDate: 2012-12-31T05:29:35.000Z
+createDate: 2012-6-27T05:29:35.000Z
 img: /images/blogs/30before30/30before30tile.png
 coverImg: /images/blogs/30before30/IMG_4545.jpg
 description: List of 30 things I want to get done before I turn 30
