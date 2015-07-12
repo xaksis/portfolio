@@ -2,8 +2,8 @@
 title: 30 before 30 - Creating a Family Tree
 createDate: 2013-06-08T05:29:35.000Z
 description: Research and create a family tree
-img: images/blogs/tree/treeTile.png
-coverImg: ../../images/blogs/tree/treeCover.png
+img: /images/blogs/tree/treeTile.png
+coverImg: /images/blogs/tree/treeCover.png
 type: blog
 layout: ./src/markup/layout/blog.handlebars
 ---

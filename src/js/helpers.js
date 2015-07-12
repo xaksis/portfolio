@@ -20,3 +20,13 @@ Handlebars.registerHelper("typeIcon", function(type) {
 Handlebars.registerHelper("getHtmlPath", function(rawPath) {
 	return rawPath.substr(0, rawPath.lastIndexOf('.'))+'.html';
 });
+
+Handlebars.registerHelper("getImageUrl", function(rawPath) {
+	for(var i=0; i<rawPath.length; i++){
+		if(rawPath[i] !== '.' && rawPath[i] !== '/'){
+			return 'http://crayonbytes.us/'+
+				rawPath.substr(i,rawPath.length);
+		}
+	}
+	return '';
+});

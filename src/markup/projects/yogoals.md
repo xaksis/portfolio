@@ -1,7 +1,7 @@
 ---
 title: YoGoals - An Angular Project
-img: images/yogoals.png
-coverImg: ../../images/projects/yogoals/yogoalsCover.png
+img: /images/yogoals.png
+coverImg: /images/projects/yogoals/yogoalsCover.png
 description: An angular project driven by a django backend
 type: project
 createDate: 2013-12-28T05:29:35.000Z

@@ -2,8 +2,8 @@
 title: 30 before 30 - Freefall at 120 mph
 createDate: 2013-09-14T05:29:35.000Z
 description: An account of sky diving
-img: images/blogs/freefall/skydiveTile.jpg
-coverImg: ../../images/blogs/freefall/IMG_9972.JPG
+img: /images/blogs/freefall/skydiveTile.jpg
+coverImg: /images/blogs/freefall/IMG_9972.JPG
 type: blog
 layout: ./src/markup/layout/blog.handlebars
 ---
