@@ -1,12 +1,15 @@
 <a href="content/{{getHtmlPath this.path}}" class="update-card shown">
-	<div class="card__header">
+	<div class="card__image-holder">
+		<img src="{{this.img}}" />
+	</div>
+	<div class="card__props">
 		<div class="card__icon">
 			{{{typeIcon this.type}}}
 		</div>
+		<div class="card__type">
+			{{this.type}}
+		</div>
 		<p class="pretty-date">{{this.prettyDate}}</p>
-	</div>
-	<div class="card__image-holder">
-		<img src="{{this.img}}" />
 	</div>
 	<div class="card__footer">
 		<div class="card__info">

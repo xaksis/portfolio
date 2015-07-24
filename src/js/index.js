@@ -6,12 +6,13 @@
 			cardsPerRow = 0,
 			cardWidth = 350,
 			cardHeight = 300,
-			margin = 20, 
+			margin = 20,
+			marginTop = 80,
 			updateArea = $('.js-home-content'),
 			win = $('.main-content');
 
 		var adjustArea = function(noOfCards, cardsPerRow){
-			var lastRowTop = coordinates[noOfCards-1].top + cardHeight + 20;
+			var lastRowTop = coordinates[noOfCards-1].top + cardHeight + marginTop;
 			updateArea.height(lastRowTop);
 			var cardsWidth = cardsPerRow*(cardWidth+margin)===0?350:cardsPerRow*(cardWidth+margin);
 			var extraSpace = win.width()-cardsWidth;
@@ -26,7 +27,7 @@
 			cardsPerRow = Math.floor(win.width()/(cardWidth + margin))===0?1:Math.floor(win.width()/(cardWidth + margin));
 			for(var i=0; i<noOfCards; i++){
 				var coord = {top: 0, left: 0};
-				coord.top = Math.floor(i/cardsPerRow) * (cardHeight + margin);
+				coord.top = Math.floor(i/cardsPerRow) * (cardHeight + marginTop);
 				coord.left = (i%cardsPerRow) * (cardWidth + margin);
 				coordinates.push(coord);
 			}

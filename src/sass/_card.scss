@@ -1,22 +1,21 @@
 //cards
 .update-card{
 	position: absolute;
-	overflow: hidden;
 	width: 0px;
 	height: 0px;
 	margin: 175px;
+	overflow: hidden;
 	@include transition(all 0.5s ease-in-out);
 	&.shown{
 		width: 350px;
-		height: 300px;
+		height: 310px;
 		margin: 0px;
 		padding: $default-padding;
 		background: $color-ramp-160;
-		border: 1px solid $color-ramp-150;
 		border-radius: $card-border-radius;
+		box-shadow: 0px 1px 2px $color-ramp-140;
 	}
 	&:hover{
-		border: 1px solid transparent;
 		box-shadow: 1px 1px 5px $color-ramp-100;
 	}
 }
@@ -28,7 +27,8 @@
 	width: 100%;
 	padding: $default-padding;
 	min-height: 60px;
-
+	background-color: rgba(0,0,0,0.04);
+	border-top: 1px solid $color-ramp-150;
 	h5, p{
 		margin: 0px;
 		font-size: 14px;
@@ -42,29 +42,37 @@
 		color: $text-secondary;
 		text-align: left;
 	}
+	&:after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: white;
+		top: 0px;
+		left: 0px;
+	}
 }
 
-.card__header{
+.card__props{
 	padding-left: 40px;
 	position: relative;
+	margin-top: 10px;
 	.pretty-date{
 		position: absolute;
 		right: 0px;
 		font-size: 12px;
-		color: $text-secondary;
+		color: $color-ramp-90;
 	}
 }
 
 .card__icon{
 	position: absolute;
-	left: 10px;
-	top: -4px;
+	left: 0px;
+	top: -8px;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
 	z-index: 10;
-	background: $color-ramp-160;
-	border: 4px solid $color-ramp-160;
 	box-sizing: content-box;
 	// border: 1px solid $border;
 	img{
@@ -75,9 +83,19 @@
 
 }
 
+.card__type{
+	position: absolute;
+	left: 35px;
+	top: 0px;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 700;
+	color: $color-ramp-120;
+}
+
 .card__image-holder{
 	overflow: hidden;
-	margin-top: 23px;
+	margin-top: 0px;
 	height: 205px;
 	position: relative;
 	img{
