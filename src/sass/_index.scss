@@ -10,6 +10,16 @@
 	bottom: 0px;
 	width: 280px;
 	background: $color-ramp-60;
+	border-right: 1px solid $color-ramp-80;
+	&:after{
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 1px;
+		right: -2px;
+		top: 0px;
+		background: $color-ramp-40;
+	}
 }
 
 .sidebar__profile{
