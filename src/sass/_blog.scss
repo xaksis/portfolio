@@ -36,6 +36,18 @@ body.blog{
     color: $color-ramp-150;
     @include background(linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)) bottom no-repeat);
   }
+  .by-line{
+    text-align: center;
+    padding-top: 15px;
+  }
+  .by-line__author{
+    display: inline-block;
+  }
+  .by-line__date{
+    color: $color-ramp-110;
+    display: inline-block;
+    margin-left: 100px;
+  }
 }
 
 .blog-content{

@@ -1,5 +1,6 @@
 ---
 title: 30 before 30 - flying a plane
+description: An account of my flying experience
 type: blog
 img: /images/blogs/flying/planeTile.jpg
 coverImg: /images/blogs/flying/flying.jpg

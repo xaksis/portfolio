@@ -30,3 +30,8 @@ Handlebars.registerHelper("getImageUrl", function(rawPath) {
 	}
 	return '';
 });
+
+Handlebars.registerHelper("getPrettyDate", function(rawDate) {
+	var mDate = moment(rawDate);
+	return mDate.calendar();
+});

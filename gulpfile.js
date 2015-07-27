@@ -80,7 +80,6 @@ gulp.task('script', function(){
 });
 
 //markup this is possibly 
-//the most complicated bit
 gulp.task('markup:base', function(){
 	return gulp.src([paths.src.base+'*.html'])
 		.pipe(gulp.dest(paths.target.base))
@@ -105,16 +104,6 @@ function dumpJson(directory){
 		//.pipe(gulp.dest(paths.target.base+paths.target[directory]));
 		.pipe(gulp.dest(paths.target.base+'content/'));
 }
-
-// gulp.task('blog:json', function(){
-// 	return dumpJson('blog')
-//     	.pipe(plugins.connect.reload());
-// });
-
-// gulp.task('projects:json', function(){
-// 	return dumpJson('projects')
-//     	.pipe(plugins.connect.reload());
-// });
 
 gulp.task('contentJson', function(){
 	return dumpJson('allMd')
