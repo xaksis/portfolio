@@ -1,6 +1,7 @@
 ---
 title: Why are we prone to avoiding Risk?
 createDate: 2013-08-10T05:29:35.000Z
+img: https://snap-photos.s3.amazonaws.com/img-thumbs/960w/7327JR687K.jpg
 description: Some thoughts about aversion to risk
 type: blog
 layout: ./src/markup/layout/blog.handlebars
