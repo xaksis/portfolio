@@ -5,7 +5,7 @@ Handlebars.registerHelper("typeIcon", function(type) {
 			imgSrc = 'images/blog-menu-icon-sm.png';
 			break; 
 		case 'project':
-			imgSrc = 'images/project-menu-icon-sm.png';
+			imgSrc = 'images/experiment-menu-icon-sm.png';
 			break;
 		case 'design':
 			imgSrc = 'images/design-menu-icon-sm.png';
