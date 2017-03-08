@@ -13,30 +13,31 @@ $primary: #47478A;
 
 
 //ramp
-$color-ramp-10: #16161F;
-$color-ramp-20: #1B1B25;
-$color-ramp-30: #1F1F2B;
-$color-ramp-40: #242432;
-$color-ramp-50: #282838;
-$color-ramp-60: #2D2D3E;
-$color-ramp-70: #424251;
-$color-ramp-80: #575765;
-$color-ramp-90: #6C6C78;
-$color-ramp-100: #81818B;
-$color-ramp-110: #96969E;
-$color-ramp-120: #ABABB2;
-$color-ramp-130: #C0C0C5;
-$color-ramp-140: #D5D5D8;
-$color-ramp-150: #EAEAEC;
+$color-ramp-10: #253443;
+$color-ramp-20: #2C4055;
+$color-ramp-30: #334C67;
+$color-ramp-40: #3A5879;
+$color-ramp-50: #41648B;
+$color-ramp-60: #48709D;
+$color-ramp-70: #4F7CAF;
+$color-ramp-80: #5688C2;
+$color-ramp-90: #6B96C9;
+$color-ramp-100: #80A5D1;
+$color-ramp-110: #95B4D8;
+$color-ramp-120: #AAC3E0;
+$color-ramp-130: #BFD2E8;
+$color-ramp-140: #D4E1EF;
+$color-ramp-150: #E9F0F7;
 $color-ramp-160: #FFFFFF;
 
-$text-primary: #212121;
-$text-secondary: $color-ramp-110;
-$text-disabled: #b8b8b8;
-$divider: #dadada;
-$border: #e6e7e8;
+//text
+$text-primary: #464E5B;
+$text-secondary: #7A8698;
+$text-disabled: #A6ADB8;
+$divider: #D9DEE4;
+$border: $divider;
 
-$default-background: #F4F4F4;
+$default-background: $color-ramp-160;
 $highlight-background: #e0e0e0;
 $dark-background: #616161;
 

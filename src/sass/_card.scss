@@ -13,7 +13,7 @@
 		padding: $default-padding;
 		background: $color-ramp-160;
 		border-radius: $card-border-radius;
-		box-shadow: 0px 0px 3px $color-ramp-100;
+		box-shadow: 0px 0px 3px #888;
 	}
 	&:hover{
 	}
@@ -26,7 +26,7 @@
 	width: 100%;
 	padding: $default-padding;
 	min-height: 60px;
-	background-color: rgba(0,0,0,0.03);
+	background-color: lighten($color-ramp-150, 3.5%);
 	border-top: 1px solid $color-ramp-150;
 	h5, p{
 		margin: 0px;
@@ -34,7 +34,7 @@
 	}
 	h5{
 		font-weight: 400;
-		color: $color-ramp-80;
+		color: $text-secondary;
 		font-weight: bold;
 	}
 	p{
@@ -59,15 +59,15 @@
 	.pretty-date{
 		position: absolute;
 		right: 0px;
+		top: 8px;
 		font-size: 12px;
-		color: $color-ramp-90;
+		color: $text-disabled;
 	}
 }
 
 .card__icon{
 	position: absolute;
 	left: 0px;
-	top: -8px;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
@@ -85,11 +85,11 @@
 .card__type{
 	position: absolute;
 	left: 35px;
-	top: 0px;
+	top: 8px;
 	text-transform: uppercase;
 	font-size: 11px;
 	font-weight: 700;
-	color: $color-ramp-120;
+	color: $text-disabled;
 }
 
 .card__image-holder{

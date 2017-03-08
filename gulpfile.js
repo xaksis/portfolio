@@ -167,7 +167,7 @@ gulp.task('watch', function(){
 	gulp.watch(paths.src.base+'sass/**/*.scss', ['style']);
 	gulp.watch([paths.src.base+paths.src.js, paths.src.base+paths.src.templates], ['script']);
 	gulp.watch(paths.src.base+'*.html', ['markup:base']);
-	gulp.watch(paths.src.base+paths.src.blog, ['markup:blog']);
+	gulp.watch(paths.src.base+paths.src.blog, ['markup:blog', 'contentJson']);
 	gulp.watch(paths.src.base+paths.src.projects, ['markup:projects', 'contentJson']);
 	gulp.watch(paths.src.base+paths.src.layout, ['markup:blog','markup:projects']);
 	gulp.watch(paths.src.base+paths.src.img, ['images']);

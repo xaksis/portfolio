@@ -1,5 +1,7 @@
+$sidebar-width: 350px;
+
 .main-content{
-	margin-left: 300px;
+	margin-left: $sidebar-width + 10;
 }
 
 .sidebar{
@@ -8,9 +10,9 @@
 	left: 0px;
 	top: 0px;
 	bottom: 0px;
-	width: 280px;
-	background: $color-ramp-60;
-	border-right: 1px solid $color-ramp-80;
+	width: $sidebar-width;
+	background: $color-ramp-80;
+	border-right: 1px solid $color-ramp-100;
 	&:after{
 		content: "";
 		position: absolute;
@@ -18,7 +20,7 @@
 		width: 1px;
 		right: -2px;
 		top: 0px;
-		background: $color-ramp-40;
+		background: $color-ramp-80;
 	}
 }
 
@@ -30,12 +32,12 @@
 	h2{
 		margin: 0px;
 		font-size: 18px;
-		color: $color-ramp-140;
+		color: $color-ramp-150;
 		line-height: 1;
 	}
 	.email-link{
 		font-size: 14px;
-		color: $color-ramp-110;
+		color: $color-ramp-130;
 		margin-top: 5px;
 		line-height: 1;
 	}
@@ -61,7 +63,7 @@
 	padding: 10px;
 	p{
 		font-size: 14px;
-		color: $color-ramp-110;
+		color: $color-ramp-130;
 		text-align: left;
 	}
 }
@@ -76,13 +78,13 @@
 	height: 60px;
 	margin-right: 10px;
 	text-align: center;
-	background: $color-ramp-50;
+	background: $color-ramp-70;
 	border-radius: 50%;
 	padding-top: 10px;
 	vertical-align: top;
 	i{
 		font-size: 30px;
-		color: $color-ramp-90;
+		color: $color-ramp-110;
 		transition: color 0.3s ease-out;
 	}
 	&:hover{
