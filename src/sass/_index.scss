@@ -83,7 +83,7 @@
 	i{
 		font-size: 30px;
 		color: $color-ramp-90;
-		@include transition(color 0.3s ease-out);
+		transition: color 0.3s ease-out;
 	}
 	&:hover{
 		i{
@@ -130,9 +130,9 @@
 	text-align: center;
 	margin-right: 20px;
 	vertical-align: bottom;
-	@include transition-property(background);
-	@include transition-duration(0.3s);
-	@include transition-timing-function(ease-out);
+	transition-property: background;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 	img{
 		width: 80%;
 		margin-top: 6px;

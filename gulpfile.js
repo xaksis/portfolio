@@ -1,7 +1,7 @@
 //var bourbon = require('node-bourbon');
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')({
-	pattern: ['gulp-*', 'gulp.*', 'del', 'streamqueue']
+	pattern: ['gulp-*', 'gulp.*', 'del', 'streamqueue', 'autoprefixer']
 });
 
 var paths = {
@@ -47,6 +47,7 @@ gulp.task('style', function () {
 		      includePaths: require('node-bourbon').includePaths
 		    })))
 		.pipe(plugins.concat('main.css'))
+			.pipe(plugins.postcss([plugins.autoprefixer()]))
     	.pipe(plugins.minifyCss())
     	.pipe(gulp.dest(paths.target.base+paths.target.css))
     	.pipe(plugins.connect.reload());

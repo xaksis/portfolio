@@ -34,7 +34,7 @@ body.blog{
     top: 0px;
     left: 0px;
     color: $color-ramp-150;
-    @include background(linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)) bottom no-repeat);
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)) bottom no-repeat;
   }
   .by-line{
     text-align: center;
