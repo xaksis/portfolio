@@ -15,7 +15,6 @@ body.blog{
     font-size: 2em;
   }
   h1, h2, h3, h4{
-  	font-family: 'Roboto', sans-serif;
   	font-weight: 700;
   	color: $text-primary;
     margin-top: $default-padding * 3;
@@ -76,6 +75,7 @@ body.blog{
   font-size: 40px;
   padding-top: 15px;
   z-index: 10;
+  color: $color-ramp-120;
 }
 
 .article-cover{
@@ -91,6 +91,9 @@ body.blog{
   border: 2px solid $color-ramp-140;
 }
 
+.mobile-toolbar{
+  display: none;
+}
 
 /* Syntax Highlight overrides
 **********************************/
@@ -98,9 +101,24 @@ body.blog{
 .hljs{
   border-radius: 7px;
   padding: $default-padding;
-  background-color: $color-ramp-40;
+  background-color: $color-ramp-30;
 }
 
 .hljs-comment{
   color: $color-ramp-80;
+}
+
+@media only screen and (max-width: 45em){
+  .mobile-toolbar{
+    display: block;
+    padding: $default-padding;
+    background-color: $color-ramp-50;
+    .mobile-home-btn{
+      color: $color-ramp-140;
+      font-size: 20px;
+    }
+  }
+  .home-btn{
+    display: none;
+  }
 }
