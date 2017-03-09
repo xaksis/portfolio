@@ -13,11 +13,11 @@ createDate: 2014-12-20T05:29:35.000Z
 
 
 
-#Overview
+# Overview
 
 A chrome extension that allows you to create vocabulary flash cards of words you encounter while surfing the web. The flash cards flip on hover, revealing the meaning of the words. 
 
-#The Story
+# The Story
 
 While I was reading my Kindle on the subway the other day, I realized that one of the features I love about e-readers, is the ability to look up meanings of words right away. Thanks to me being the king of mediocre vocabulary, I use this feature very frequently. However, no matter what I try it is tough for me to retain the meaning of the word I just looked up a few days from now. 
 
@@ -27,7 +27,7 @@ When I came home, I looked up how to create extensions for Chrome. Then I did so
 
 ![Cabulary Screen Shot](../../images/projects/cabulary/screenshot.png)
 
-#Usage
+# Usage
 
 Once you have added the extension to your Chrome
   1. Highlight the word you want to add to your flashcard collection

@@ -32,7 +32,7 @@ $sidebar-width: 350px;
 	h2{
 		margin: 0px;
 		font-size: 18px;
-		color: $color-ramp-150;
+		color: $color-ramp-160;
 		line-height: 1;
 		font-family: 'Varela Round', sans-serif;
 	}
@@ -65,6 +65,9 @@ $sidebar-width: 350px;
 	p{
 		color: $color-ramp-130;
 		text-align: left;
+		strong{
+			color: $color-ramp-150;
+		}
 	}
 }
 
