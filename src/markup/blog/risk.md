@@ -7,7 +7,7 @@ type: blog
 layout: ./src/markup/layout/blog.handlebars
 ---
 
-#Backstory
+# Backstory
 
 I'm currently at a phase where one realizes what role career plays in his/her life. Queue in a slew of career related documentaries and news, and you'll have a pretty good idea of what gents and ladies in this phase, spend a good chunk of their time on. It seems like everyone is either trying to grasp how to make the right career decisions or is giving out advice on how to be successful. One of the common themes that I encounter very frequently is a rather simple one - "take a risk!". In order to understand what this means, we should first consider what a **safe job** is. Not too hard to picture, is it? In fact, most of us are in our safe/cushy jobs now - A large organization, decent money, decent hours, working as one of hundreds if not thousands of others just like you doing similar if not the same thing as you. Most of us do not equate this to a 'successful career' though, at least not in our 20s. The wisdom to realize that having made it this far already qualifies us as successful, will probably hit us at around age 60 or so. But for now, this does not fit the idea of  "success" for most of us.
 
