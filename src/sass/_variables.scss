@@ -37,7 +37,7 @@ $text-disabled: #A6ADB8;
 $divider: #D9DEE4;
 $border: $divider;
 
-$default-background: $color-ramp-160;
+$default-background: lighten($color-ramp-150, 5%);
 $highlight-background: #e0e0e0;
 $dark-background: #616161;
 
