@@ -34,6 +34,7 @@ $sidebar-width: 350px;
 		font-size: 18px;
 		color: $color-ramp-150;
 		line-height: 1;
+		font-family: 'Varela Round', sans-serif;
 	}
 	.email-link{
 		font-size: 14px;
@@ -62,7 +63,6 @@ $sidebar-width: 350px;
 .sidebar__about-me{
 	padding: 10px;
 	p{
-		font-size: 14px;
 		color: $color-ramp-130;
 		text-align: left;
 	}
@@ -147,7 +147,8 @@ $sidebar-width: 350px;
 		bottom: -20px;
 		left: 0px;
 		text-align: center;
-		color: #777;
+		color: $text-secondary;
+		font-family: 'Varela Round', sans-serif;
 	}
 	&:nth-child(3){
 		img{

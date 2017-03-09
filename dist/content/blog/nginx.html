@@ -62,11 +62,11 @@
 $ which nginx
 /usr/sbin/nginx
 </code></pre>
-<h2 id="2-start-the-service-and-verify-you-can-hit-it">2. start the service and verify you can hit it</h2>
+<h2 id="2-start-the-service-and-verify-you-can-hit-it">2. Start the service and verify you can hit it</h2>
 <pre><code class="lang-bash">$ sudo service nginx start
 </code></pre>
 <p>now hit the server with the browser and you should see nginx default page. by default nginx serves html from <code>/user/share/nginx/html</code>. We need to specify our own directory to serve from. So let&#39;s do that next.</p>
-<h2 id="3-lets-create-a-directory-to-serve-html-from">3. lets create a directory to serve html from</h2>
+<h2 id="3-lets-create-a-directory-to-serve-html-from">3. Lets create a directory to serve html from</h2>
 <p>we need to also modify permisson so that nginx can read from there</p>
 <pre><code class="lang-bash">$ mkdir /var/www
 $ sudo chmod -R 755 /var/wwww

@@ -1,6 +1,6 @@
 //blog
 body.blog{
-  font-family: 'Merriweather', serif;
+  font-family: 'Droid Sans', serif;
   background: $color-ramp-160;
   text-align: left;
   color: $text-primary;
@@ -17,7 +17,9 @@ body.blog{
   h1, h2, h3, h4{
   	font-family: 'Roboto', sans-serif;
   	font-weight: 700;
-  	color: $color-ramp-60;
+  	color: $text-primary;
+    margin-top: $default-padding * 3;
+    font-family: 'Varela Round', sans-serif;
   }
   h1.blog-title{
     position: relative;

@@ -30,16 +30,17 @@
 	border-top: 1px solid $color-ramp-150;
 	h5, p{
 		margin: 0px;
-		font-size: 14px;
 	}
 	h5{
-		font-weight: 400;
 		color: $text-secondary;
 		font-weight: bold;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 14px;
 	}
 	p{
-		color: $text-secondary;
+		color: $text-disabled;
 		text-align: left;
+		font-size: 14px;
 	}
 	&:after{
 		content: "";
