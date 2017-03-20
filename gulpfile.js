@@ -153,6 +153,7 @@ gulp.task('clean', function(cb) {
 gulp.task('connect', function(){
 	plugins.connect.server({
 		root: [paths.target.base],
+		port: 8888,
 		livereload: true
 	});
 });
