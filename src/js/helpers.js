@@ -35,3 +35,9 @@ Handlebars.registerHelper("getPrettyDate", function(rawDate) {
 	var mDate = moment(rawDate);
 	return mDate.calendar();
 });
+
+Handlebars.registerHelper("getMomentDate", function(rawDate) {
+	var dateStr = rawDate.substr(0,rawDate.length-5);
+	var mDate = moment(dateStr);
+	return mDate.calendar();
+});

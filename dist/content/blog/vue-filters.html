@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Set up for Nginx on a fresh ec2 instance">
-  <meta name="title" content="Setting up Nginx on AWS ec2">
+  <meta name="description" content="How to add filters in Vue 2">
+  <meta name="title" content="Add filters in Vue 2">
   <meta name="author" content="Akshay Anand">
   <meta property="og:site_name" content="CrayonBytes">
-  <meta property="og:title" content="Setting up Nginx on AWS ec2">
+  <meta property="og:title" content="Add filters in Vue 2">
   <meta property="og:image" content="http://crayonbytes.us/images/codebits.png">
-  <meta property="og:description" content="Set up for Nginx on a fresh ec2 instance">
+  <meta property="og:description" content="How to add filters in Vue 2">
   <meta property="og:type" content="article">
   <meta property="article:author" content="Akshay Anand">
-  <meta property="article:published_time" content="Wed Mar 08 2017 08:29:35 GMT-0500 (EST)">
+  <meta property="article:published_time" content="Tue Mar 21 2017 09:29:35 GMT-0400 (EDT)">
   <meta name="twitter:site" content="@CrayonBytes">
   <meta name="twitter:image:src" content="http://crayonbytes.us/images/codebits.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@CrayonBytes">
   
-  <title>Setting up Nginx on AWS ec2</title>
+  <title>Add filters in Vue 2</title>
 
   <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans|Varela+Round" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/foundation-icons.css">
@@ -32,55 +32,73 @@
       <a class="mobile-home-btn" href="/"><i class="fi-home"></i> Home</a>
     </div>
     <h1 class="blog-title">
-        Setting up Nginx on AWS ec2
+        Add filters in Vue 2
     </h1>
     <div class="by-line">
       <span class="by-line__author">By <strong><a href="/">Akshay Anand</a></strong></span>
-      <span class="by-line__date js-create-date">Wed Mar 08 2017 08:29:35 GMT-0500 (EST)</span>
+      <span class="by-line__date js-create-date">Tue Mar 21 2017 09:29:35 GMT-0400 (EDT)</span>
     </div>
     <div class="blog-content">
         
         <article>
-            <p><h1 id="quick-setup-for-nginx-on-a-fresh-ec2-instance">Quick setup for Nginx on a fresh ec2 Instance</h1>
-<p>So this is a quick one. I just went through setting up Nginx on ec2 for this very blog and was surprised how easy it was. so here&#39;s a quick how to</p>
-<h2 id="1-lets-install-nginx">1. Lets install nginx</h2>
-<pre><code class="lang-bash">$ sudo yum install -y nginx
-$ which nginx
-/usr/sbin/nginx
-</code></pre>
-<h2 id="2-start-the-service-and-verify-you-can-hit-it">2. Start the service and verify you can hit it</h2>
-<pre><code class="lang-bash">$ sudo service nginx start
-</code></pre>
-<p>now hit the server with the browser and you should see nginx default page. by default nginx serves html from <code>/user/share/nginx/html</code>. We need to specify our own directory to serve from. So let&#39;s do that next.</p>
-<h2 id="3-lets-create-a-directory-to-serve-html-from">3. Lets create a directory to serve html from</h2>
-<p>we need to also modify permisson so that nginx can read from there</p>
-<pre><code class="lang-bash">$ mkdir /var/www
-$ sudo chmod -R 755 /var/wwww
-</code></pre>
-<h2 id="4-modify-nginx-config-to-point-to-the-new-directory">4. Modify nginx config to point to the new directory</h2>
-<p>Nginx config file is located in <code>/etc/nginx/nginx.conf</code>. Open it with your favorite editor and modify the following section</p>
-<p>before: </p>
-<pre><code class="lang-javascript">server {
-  listen          80 default_server;
-  listen          [::]:80 default_server;
-  server_name     localhost;
-  root            /user/share/nginx/html  
-  ...
+            <p><p>Just started experimenting with <a href="https://vuejs.org/">Vue</a> and I must say, out of all the javascript frameworks I&#39;ve experimented with recently (react, angular 2), Vue makes the most sense to me and has the fastest 0-60. One of the first things I had to look up a bit was how to add custom filters. It seems like vue 2 has decided to get rid of its in-built filters. So i&#39;m going to quickly go over it in case anyone else is looking as well. </p>
+<h1 id="your-single-page-view-component">Your single page view component</h1>
+<p>so the single page view comoponent probably has a script part that looks like this</p>
+<pre><code class="lang-javascript">export default {
+  name: &#39;Learn&#39;,
+  data () {
+    return {
+      message: &#39;You loaded this page on &#39; + new Date(),
+    }
+  }
 }
 </code></pre>
-<p>after:</p>
-<pre><code class="lang-javascript">server {
-  listen          80 default_server;
-  listen          [::]:80 default_server;
-  server_name     localhost;
-  root            /var/www/myProject/dist; 
-  ...
+<h1 id="create-a-filters-file">Create a filters file</h1>
+<p>Let&#39;s first create a javascript file that holds all our filters. </p>
+<pre><code class="lang-javascript">// filters/index.js
+
+function capitalize(value) {
+  if (!value) return &#39;&#39;
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+}
+
+export { capitalize }
+</code></pre>
+<p>As you can see we have created a capitalize function and are exporting that. If you have more than one, you can export all of them like so: <code>export {capitalize, filter 2, filter 3}</code></p>
+<h1 id="import-filters-in-our-component">Import filters in our component</h1>
+<p>Going back to our component, we can now import the filters in there</p>
+<pre><code class="lang-javascript">import {capitalize} from &#39;../filters&#39;
+
+export default {
+  name: &#39;Learn&#39;,
+  data () {
+    return {
+      message: &#39;You loaded this page on &#39; + new Date(),
+    }
+  }
 }
 </code></pre>
-<h2 id="5-restart-nginx">5. Restart nginx</h2>
-<pre><code class="lang-bash">$ sudo service nginx restart
+<p>but wait... we&#39;re not done yet.</p>
+<h1 id="add-the-imported-function-to-component-s-methods">Add the imported function to component&#39;s methods</h1>
+<pre><code class="lang-javascript">import {capitalize} from &#39;../filters&#39;
+
+export default {
+  name: &#39;Learn&#39;,
+  data () {
+    return {
+      message: &#39;You loaded this page on &#39; + new Date(),
+    }
+  },
+  methods: {
+    capitalize
+    //other methods...
+  }
+}
 </code></pre>
-<p>Try hitting the server again, you should now be able to serve your project content over nginx! Over to you.</p>
+<p>that&#39;s it! we&#39;re done. now to use it in the template all we have to do is: </p>
+<pre><code class="lang-html">&lt;span&gt;{{ capitalize(something) }}&lt;/span&gt;
+</code></pre>
 </p>
         </article>
         
