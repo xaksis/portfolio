@@ -118,6 +118,9 @@ gulp.task('markup:blog', function(){
 		.pipe(plugins.grayMatter())
 		.pipe(plugins.markdown())
 		.pipe(plugins.layout(function(file){
+			if(!file.data.createDate) {
+				file.data.createDate = file.stat.birthtime;
+			}
 			return file.data;
 		}))
 		.pipe(gulp.dest(paths.target.base+paths.target.blog))
@@ -129,6 +132,9 @@ gulp.task('markup:projects', function(){
 		.pipe(plugins.grayMatter())
 		.pipe(plugins.markdown())
 		.pipe(plugins.layout(function(file){
+			if(!file.data.createDate) {
+				file.data.createDate = file.stat.birthtime;
+			}
 			return file.data;
 		}))
 		.pipe(gulp.dest(paths.target.base+paths.target.projects))
