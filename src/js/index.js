@@ -42,10 +42,14 @@
 
 	var filter_m = (function(){
 		var allData = [], filtered = [];
+		var savedState = null;
 		
 		var initialize = function(data){
 			allData = data;
 			addHandlers();
+			if (savedState) {
+				filter(savedState);
+			}
 		};
 
 		function highlight(dom){
@@ -57,23 +61,19 @@
 
 		var addHandlers = function(){
 			$('.js-blog-link').on('click', function(){
-				highlight($(this));
-				filter('blog');
+				router_m.handleRouteChange('blog');
 				return false;
 			});
 			$('.js-project-link').on('click', function(){
-				highlight($(this));
-				filter('project');
+				router_m.handleRouteChange('project');
 				return false;
 			});
 			$('.js-design-link').on('click', function(){
-				highlight($(this));
-				filter('design');
+				router_m.handleRouteChange('design');
 				return false;
 			});
 			$('.js-all-link').on('click', function(){
-				highlight($(this));
-				showAll();
+				router_m.handleRouteChange('all');
 				return false;
 			});
 		};
@@ -85,12 +85,20 @@
 			content_m.adjust();
 		};
 
+		var handleHistory = function (type) {
+			history.pushState({type: type}, '', '#/'+type);
+		};
+
 		var filter = function(type){
-			console.log('filtering...');
+			if (!allData.length) {
+				savedState = type;
+				return;
+			}
+			savedState = null;
+
 			filtered = _.filter(allData, function(value){
 				return value.type != type;
 			});
-			console.log(filtered.length);
 			//show everything first
 			$('.update-card').each(function(){
 				$(this).addClass('shown');
@@ -103,11 +111,14 @@
 			}
 			setTimeout(function(){
 				content_m.adjust();
-			}, 200);
+			}, 500);
 		};
 
 		return{
-			init: initialize
+			init: initialize,
+			filter: filter,
+			highlight: highlight,
+			showAll: showAll,
 		};
 	})();
 
@@ -132,7 +143,7 @@
 					return -cdate.valueOf();
 				});
 				renderAllCards();
-				filter_m.init(data);				
+				filter_m.init(data);
 			});
 		};
 
@@ -149,7 +160,6 @@
 		};
 
 		var renderAllCards = function(){
-			console.log('rendering...');
 			_.forEach(data, function(value, key){
 				renderCard(value);
 			});
@@ -161,6 +171,7 @@
 			//from here on.
 			read();
 			addHandlers();
+			router_m.init();
 		};
 
 		return {
@@ -169,10 +180,69 @@
 		};
 	})();
 
+	var router_m = (function () {
+		var handleState = function(state) {
+			switch(state) {
+				case 'blog':
+					filter_m.highlight($('.js-blog-link'));
+					filter_m.filter('blog');
+					break;
+				case 'project':
+					filter_m.highlight($('.js-project-link'));
+					filter_m.filter('project');
+					break;
+				case 'design':
+					filter_m.highlight($('.js-design-link'));
+					filter_m.filter('design');
+					break;
+				default: 
+					filter_m.highlight($('.js-all-link'));
+					filter_m.showAll();
+					break;
+			}
+		};
+
+		var handleRoute = function (state) {
+			switch(state) {
+				case 'blog':
+				case 'project':
+				case 'design':
+					history.pushState({type: state}, '', '#/'+state);
+					break;
+				default:
+					history.pushState({type: 'all'}, '', '#/');
+					break;
+			}
+		};
+
+		var handleRouteChange = function(stateName) {
+			handleState(stateName);
+			handleRoute(stateName);
+		};
+
+		var initialize = function() {
+			$(window).on('popstate', function(e){
+				if (e.originalEvent && e.originalEvent.state) {
+					handleState(e.originalEvent.state.type);
+				}
+			});
+
+			var p = window.location.href.split("/");
+			var stateName = p[p.length-1];
+			handleRouteChange(stateName);
+		};
+
+		return {
+			handleRouteChange: handleRouteChange,
+			init: initialize,
+		};
+	})();
+
 	var p = window.location.pathname.split("/");
 	var filename = p[p.length-1];
-	if(!filename || filename === "index.html")
+	if(!filename || filename === "index.html") {
 		content_m.init();
+	}
 
 });
 

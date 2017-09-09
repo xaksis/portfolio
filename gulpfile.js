@@ -115,10 +115,10 @@ gulp.task('contentJson', function(){
 
 gulp.task('markup:blog', function(){
 	return gulp.src([paths.src.base+paths.src.blog])
-		.pipe(plugins.frontMatter())
+		.pipe(plugins.grayMatter())
 		.pipe(plugins.markdown())
 		.pipe(plugins.layout(function(file){
-			return file.frontMatter;
+			return file.data;
 		}))
 		.pipe(gulp.dest(paths.target.base+paths.target.blog))
     	.pipe(plugins.connect.reload());
@@ -126,10 +126,10 @@ gulp.task('markup:blog', function(){
 
 gulp.task('markup:projects', function(){
 	return gulp.src([paths.src.base+paths.src.projects])
-		.pipe(plugins.frontMatter())
+		.pipe(plugins.grayMatter())
 		.pipe(plugins.markdown())
 		.pipe(plugins.layout(function(file){
-			return file.frontMatter;
+			return file.data;
 		}))
 		.pipe(gulp.dest(paths.target.base+paths.target.projects))
     	.pipe(plugins.connect.reload());
